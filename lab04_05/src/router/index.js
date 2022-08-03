@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import EventDetails from '../views/event/EventDetails.vue'
 import Airlines from '../views/event/EventAirline.vue'
 import EventLayout from '../views/event/EventLayout.vue'
+import NotFoundView from '../views/NotFoundView.vue'
 
 const routes = [
   {
@@ -42,6 +43,17 @@ const routes = [
         component: Airlines
       }
     ]
+  },
+  {
+    path: '/404/:resource',
+    name: '404Resource',
+    component: NotFoundView,
+    props: true
+  },
+  {
+    path: '/:catchAll(.*)',
+    name: 'NotFound',
+    component: NotFoundView
   }
 ]
 
