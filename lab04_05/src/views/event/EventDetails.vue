@@ -1,32 +1,14 @@
 <template>
-  <div v-if="passenger">
-    <h1>{{ passenger.gender }}</h1>
-    <p>
-      {{ passenger.ip_address }} on {{ passenger.Source }} @
-      {{ passenger.Destination }}
-    </p>
-    <p>{{ passenger.travelDate }}</p>
-  </div>
+  <h1>Name: {{ passenger.first_name }} {{ passenger.last_name }}</h1>
+  <h1>Sex: {{ passenger.gender }}</h1>
+  <p>
+    Address: {{ passenger.ip_address }} on {{ passenger.Source }} @
+    {{ passenger.Destination }}
+  </p>
+  <p>Date: {{ passenger.travelDate }}</p>
 </template>
-
 <script>
-import EventService from '@/service/EventService.js'
-// import EventService from '../services/EventService.js'
 export default {
-  props: ['id'],
-  data() {
-    return {
-      passenger: null
-    }
-  },
-  created() {
-    EventService.getPassenger(this.id)
-      .then((response) => {
-        this.passenger = response.data
-      })
-      .catch((error) => {
-        console.log(error)
-      })
-  }
+  props: ['passenger']
 }
 </script>
