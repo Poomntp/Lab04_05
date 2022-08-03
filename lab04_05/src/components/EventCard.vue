@@ -1,13 +1,13 @@
 <template>
-  <!-- <router-link
+  <router-link
     class="event-link"
-    :to="{ name: "EventDetails", params: { id: event.id } }"
-  > -->
-  <div class="event-card">
-    <span>@{{ passenger.first_name }} on {{ passenger.last_name }}</span>
-    <h4>{{ passenger.email }}</h4>
-  </div>
-  <!-- </router-link> -->
+    :to="{ name: 'EventDetails', params: { id: passenger.id } }"
+  >
+    <div class="event-card">
+      <span>@{{ passenger.first_name }} on {{ passenger.last_name }}</span>
+      <h4>{{ passenger.email }}</h4>
+    </div>
+  </router-link>
 </template>
 <script>
 export default {

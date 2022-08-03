@@ -36,7 +36,7 @@
 // @ is an alias to /src
 import { watchEffect } from '@vue/runtime-core'
 import EventCard from '@/components/EventCard.vue'
-import EventService from '@/services/EventService.js'
+import EventService from '@/service/EventService.js'
 
 export default {
   name: 'HomeView',
